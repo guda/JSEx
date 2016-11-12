@@ -51,4 +51,5 @@ Used to deserialize string to Object, string needs to be valid JSON
 //returns object deserialized from string so you can access
 //it's properties like obj.firstName
 console.log(obj.firstName);
+//writes "John" to console
 ```
