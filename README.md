@@ -26,6 +26,12 @@ Converts string to array, or array of arrays
 //returns Array of Arrays
 //[["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
 ```
+###String.isEmpty()
+Used to check if string is empty, I use it to avoid " if(variable.length > 0) "
+```Javascript
+"".isEmpty(); //returns true
+"senad".isEmpty(); //returns false
+```
 ###String.isEmail()
 
 Returns "true" if string is an email, and "false" if it's not.

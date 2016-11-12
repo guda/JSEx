@@ -31,16 +31,21 @@ if (!String.prototype.isEmail) {
         return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.toString());
     }
 }
+//Check if string is empty
+if (!String.prototype.isEmpty) {
+    String.prototype.isEmpty = function () {
+        return this.toString().length == 0;
+    }
+}
 //trim string
 if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
-  };
+    String.prototype.trim = function () {
+        return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    };
 }
 //deserialize string to object
-if(!String.prototype.deserialize)
-{
-    String.prototype.deserialize = function(){
+if (!String.prototype.deserialize) {
+    String.prototype.deserialize = function () {
         return JSON.parse(this.toString());
     }
 }
