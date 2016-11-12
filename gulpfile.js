@@ -43,3 +43,9 @@ gulp.task("min:css", function () {
 });
 
 gulp.task("min", ["min:js", "min:css"]);
+
+gulp.task("minjs", function(){
+    gulp.src('./js/*.js')
+    .pipe('uglify')
+    .pipe(gulp.dest('dist'));
+});
