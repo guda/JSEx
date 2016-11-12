@@ -1,4 +1,35 @@
 # JSEx - JavaScript Extensions
-String.contains is function to check if string contains another string
+##String.contains(string)
 
-s
+String.contains is a function to check if string contains another string
+```JavaScript
+"abcdfgh".contains('cdf'); //returns true
+"abcdfgh".contains('cda'). //returns false
+```
+##String.toArray(separator1, separator2)
+
+Converts string to array, or array of arrays
+
+```Javascript
+//single separator
+"1,2,3,4,5,6".toArray(','); //passing "," as separator
+//returns Array ["1", "2", "3", "4", "5", "6"]
+```
+
+```Javascript
+//multiple separators
+"1,2,3|4,5,6|7,8,9".toArray('|',','); //passing "|" as first separator, and "," as second
+//returns Array of Arrays
+//[["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
+```
+##String.isEmail()
+
+Returns "true" if string is an email, and "false" if it's not.
+
+```Javascript
+//example of valid
+"senad@example.com".isEmail(); //returns true
+
+//example of invalid
+"senad@example".isEmail(); //returns false
+```
