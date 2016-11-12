@@ -33,3 +33,10 @@ Returns "true" if string is an email, and "false" if it's not.
 //example of invalid
 "senad@example".isEmail(); //returns false
 ```
+#String.deserialize();
+```Javascript
+ var obj = '{"firstName": "John", "lastName": "Doe", "city": "N/A", "country": "JS"}'.deserialize();
+//returns object deserialized from string so you can access
+//it's properties like obj.firstName
+console.log(obj.firstName);
+```

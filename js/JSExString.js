@@ -37,3 +37,10 @@ if (!String.prototype.trim) {
     return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };
 }
+//deserialize string to object
+if(!String.prototype.deserialize)
+{
+    String.prototype.deserialize = function(){
+        return JSON.parse(this.toString());
+    }
+}
