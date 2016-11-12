@@ -34,6 +34,8 @@ Returns "true" if string is an email, and "false" if it's not.
 "senad@example".isEmail(); //returns false
 ```
 #String.deserialize();
+
+Used to deserialize string to Object, string needs to be valid JSON
 ```Javascript
  var obj = '{"firstName": "John", "lastName": "Doe", "city": "N/A", "country": "JS"}'.deserialize();
 //returns object deserialized from string so you can access
