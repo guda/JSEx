@@ -33,7 +33,7 @@ Returns "true" if string is an email, and "false" if it's not.
 //example of invalid
 "senad@example".isEmail(); //returns false
 ```
-#String.deserialize();
+##String.deserialize();
 
 Used to deserialize string to Object, string needs to be valid JSON
 ```Javascript
