@@ -1,12 +1,16 @@
 # JSEx - JavaScript Extensions
-##String.contains(string)
+
+##String extensions
+Additional functions used everyday attached to String type, so you can access directly on string variable. e.g. "senad@example.com".isEmail()
+
+###String.contains(string)
 
 String.contains is a function to check if string contains another string
 ```JavaScript
 "abcdfgh".contains('cdf'); //returns true
 "abcdfgh".contains('cda'). //returns false
 ```
-##String.toArray(separator1, separator2)
+###String.toArray(separator1, separator2)
 
 Converts string to array, or array of arrays
 
@@ -22,7 +26,7 @@ Converts string to array, or array of arrays
 //returns Array of Arrays
 //[["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
 ```
-##String.isEmail()
+###String.isEmail()
 
 Returns "true" if string is an email, and "false" if it's not.
 
@@ -33,7 +37,7 @@ Returns "true" if string is an email, and "false" if it's not.
 //example of invalid
 "senad@example".isEmail(); //returns false
 ```
-##String.deserialize();
+###String.deserialize();
 
 Used to deserialize string to Object, string needs to be valid JSON
 ```Javascript
