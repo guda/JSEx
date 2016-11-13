@@ -53,3 +53,16 @@ Used to deserialize string to Object, string needs to be valid JSON
 console.log(obj.firstName);
 //writes "John" to console
 ```
+
+##Object extensions
+Serialize object by calling prototyped method on its' instance.
+```Javascript
+//create object
+var b = { firstName: "John", lastName: "Doe", country: "JavaScript" };
+//serialize object 
+var serialized = b.serialize();
+//write to console
+console.log(serialized);
+//result
+//{"firstName":"John","lastName":"Doe","country":"JavaScript"}
+```
