@@ -10,11 +10,11 @@ var gulp = require("gulp"),
 var webroot = "./";
 
 var paths = {
-    js: webroot + "js/**/*.js",
-    minJs: webroot + "js/**/*.min.js",
+    js: webroot + "src/**/*.js",
+    minJs: webroot + "dist/**/*.min.js",
     css: webroot + "css/**/*.css",
     minCss: webroot + "css/**/*.min.css",
-    concatJsDest: webroot + "js/JSEx.pack.min.js",
+    concatJsDest: webroot + "dist/JSEx.pack.min.js",
     concatCssDest: webroot + "css/JSEx.pack.min.css"
 };
 
@@ -29,23 +29,17 @@ gulp.task("clean:css", function (cb) {
 gulp.task("clean", ["clean:js", "clean:css"]);
 
 gulp.task("min:js", function () {
-    return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
-        .pipe(concat(paths.concatJsDest))        
-        .pipe(uglify())        
-        .pipe(gulp.dest("."));
+    gulp.src(paths.js)
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task("min:css", function () {
-    return gulp.src([paths.css, "!" + paths.minCss])
-        .pipe(concat(paths.concatCssDest))
+       gulp.src(paths.css)        
         .pipe(cssmin())
-        .pipe(gulp.dest("."));
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest("./css"));
 });
 
 gulp.task("min", ["min:js", "min:css"]);
-
-gulp.task("minjs", function(){
-    gulp.src('./js/*.js')
-    .pipe('uglify')
-    .pipe(gulp.dest('dist'));
-});
