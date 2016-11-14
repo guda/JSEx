@@ -67,3 +67,12 @@ console.log(serialized);
 //result
 //{"firstName":"John","lastName":"Doe","country":"JavaScript"}
 ```
+###Object.getProperties()
+Returns list of properties (ignoring functions) and theirs values[{key: "memberName", value:"memberValue"}] 
+```Javascript
+//create object
+var b = { firstName: "John", lastName: "Doe", country: "JavaScript", init: function(){ console.log('I\'m function!'); }};
+var properties = b.getProperties();
+console.log(properties); //writes object to console
+//[{"key":"firstName","value":"John"},{"key":"lastName","value":"Doe"},{"key":"country","value":"JavaScript"}]
+```J
