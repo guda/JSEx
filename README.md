@@ -75,4 +75,4 @@ var b = { firstName: "John", lastName: "Doe", country: "JavaScript", init: funct
 var properties = b.getProperties();
 console.log(properties); //writes object to console
 //[{"key":"firstName","value":"John"},{"key":"lastName","value":"Doe"},{"key":"country","value":"JavaScript"}]
-```J
+```
